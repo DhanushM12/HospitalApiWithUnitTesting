@@ -9,8 +9,8 @@ app.use(express.urlencoded());
 //to initialize Passport
 app.use(passport.initialize());
 //use express router
-//app.use("/", require("./routes"));
-app.get("/", (req, res) => res.send("<h1>Hello World!</h1>"));
+app.use("/", require("./routes"));
+//app.get("/", (req, res) => res.send("<h1>Hello World!</h1>"));
 //to bind and listen the connections on the specified host and port
 app.listen(port, function (err) {
   if (err) {

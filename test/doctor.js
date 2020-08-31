@@ -16,8 +16,8 @@ var createdDoctorId = "";
 let createdPatientId = "";
 
 let baseUrl = "http://localhost:8000";
-let doctorsUrl = "/api/v1/doctors";
-let patientsUrl = "/api/v1/patients";
+let doctorsUrl = "/doctors";
+let patientsUrl = "/patients";
 
 doctorsData["baseUrl"] = baseUrl;
 doctorsData["doctorsUrl"] = doctorsUrl;
@@ -54,7 +54,7 @@ describe("Post - Doctor Calls", function () {
         createdDoctorId = createdDoctor._id;
         expect(body.status).to.equal(200);
         expect(createdDoctor).to.have.property("name");
-        expect(createdDoctor).to.have.property("phone");
+        expect(createdDoctor).to.have.property("email");
         expect(createdDoctorId.toString().length).to.greaterThan(0);
         done();
       });

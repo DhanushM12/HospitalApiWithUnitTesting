@@ -24,7 +24,7 @@ doctorsData["doctorsUrl"] = doctorsUrl;
 
 //Params for register doctor post request
 let doctorName = "Doctor_Test";
-let doctorPhone = "0123456789";
+let doctorEmail = "doc_test@gmail.com";
 let password = "password";
 
 //Params for register patient post request
@@ -42,7 +42,7 @@ describe("Post - Doctor Calls", function () {
       .set("content-type", "application/x-www-form-urlencoded")
       .send({
         name: doctorName,
-        phone: doctorPhone,
+        email: doctorEmail,
         password: password,
       })
       .end((err, body, response) => {
